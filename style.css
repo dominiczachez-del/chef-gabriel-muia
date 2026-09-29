@@ -1,0 +1,966 @@
+/* =========================================
+   CHEF GABRIEL MUIA
+   PREMIUM WEBSITE STYLES
+========================================= */
+
+:root {
+    --black: #0b0b0b;
+    --dark: #121212;
+    --dark-soft: #1b1b1b;
+    --gold: #c9a45c;
+    --gold-light: #e3c783;
+    --cream: #f4efe5;
+    --white: #ffffff;
+    --grey: #b8b8b8;
+    --border: rgba(201, 164, 92, 0.28);
+
+    --heading: "Cormorant Garamond", Georgia, serif;
+    --body: "Montserrat", Arial, sans-serif;
+
+    --container: 1180px;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--body);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.logo strong {
+    font-family: var(--heading);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+.nav-links .nav-whatsapp {
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 11px 17px;
+}
+
+.nav-links .nav-whatsapp:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--gold);
+    margin: 5px 0;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.82) 38%,
+            rgba(0, 0, 0, 0.35) 70%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("chef-gabriel-hero.jpg") center center / contain no-repeat,
+        #080808;
+}
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(201, 164, 92, 0.08),
+            transparent 40%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 80px;
+    max-width: 900px;
+}
+
+.eyebrow,
+.section-label {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-family: var(--heading);
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 500;
+    line-height: 0.98;
+    margin-bottom: 28px;
+}
+
+.hero h1 span,
+.section-heading span,
+.about-content h2 span,
+.feature-content h2 span,
+.contact-intro h2 span {
+    color: var(--gold-light);
+}
+
+.hero-text {
+    max-width: 620px;
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 38px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.scroll-indicator span {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-frame {
+    position: relative;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.image-frame::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 70%;
+    height: 70%;
+    border-top: 1px solid var(--gold);
+    border-right: 1px solid var(--gold);
+    z-index: 0;
+}
+
+.image-frame img {
+    height: 580px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-content .section-label,
+.section-label {
+    color: #8c6b32;
+}
+
+.about-content h2,
+.section-heading h2,
+.contact-intro h2 {
+    font-family: var(--heading);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.gold-line {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 28px;
+}
+
+.about-content p {
+    max-width: 560px;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 15px;
+    color: #7d5d29;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.text-link span {
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.text-link:hover span {
+    transform: translateX(6px);
+}
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+    background: var(--dark);
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.section-heading > p:last-child {
+    color: var(--grey);
+    font-size: 14px;
+    max-width: 600px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.service-card {
+    position: relative;
+    min-height: 390px;
+    padding: 34px 25px;
+    background: var(--dark);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s ease;
+}
+
+.service-card:hover {
+    background: #202020;
+    transform: translateY(-7px);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.service-icon {
+    font-family: var(--heading);
+    color: var(--gold-light);
+    font-size: 38px;
+    margin: 45px 0 20px;
+}
+
+.service-card h3 {
+    font-family: var(--heading);
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.service-card p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.service-card a {
+    position: absolute;
+    left: 25px;
+    bottom: 28px;
+    color: var(--gold-light);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   FEATURE
+========================================= */
+
+.feature-section {
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-image {
+    min-height: 650px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85")
+        center/cover no-repeat;
+}
+
+.feature-content {
+    background: #151515;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.feature-content h2 {
+    font-family: var(--heading);
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.feature-content > p:not(.section-label) {
+    color: #aaa;
+    max-width: 530px;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.why .section-heading {
+    margin-bottom: 45px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.why-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    padding-top: 22px;
+}
+
+.why-item span {
+    color: #9b7535;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.why-item h3 {
+    font-family: var(--heading);
+    font-size: 25px;
+    line-height: 1.1;
+    margin: 25px 0 12px;
+}
+
+.why-item p {
+    color: #666;
+    font-size: 12px;
+}
+
+/* =========================================
+   BOOKING
+========================================= */
+
+.booking {
+    background: #101010;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.booking-step {
+    border: 1px solid var(--border);
+    padding: 40px;
+    min-height: 230px;
+    transition: 0.3s ease;
+}
+
+.booking-step:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    color: var(--gold);
+    font-family: var(--heading);
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.booking-step h3 {
+    font-family: var(--heading);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.booking-step p {
+    color: #999;
+    font-size: 13px;
+}
+
+.booking-action {
+    margin-top: 45px;
+    text-align: center;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    background:
+        linear-gradient(
+            rgba(8, 8, 8, 0.93),
+            rgba(8, 8, 8, 0.97)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.contact-intro > p:not(.section-label) {
+    max-width: 500px;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--gold);
+    background: rgba(201, 164, 92, 0.05);
+}
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+    flex-shrink: 0;
+}
+
+.contact-item small {
+    display: block;
+    color: #777;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.contact-item strong {
+    font-size: 11px;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #060606;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: var(--heading);
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.footer p {
+    color: #777;
+    font-size: 10px;
+}
+
+.footer-logo + p {
+    margin-top: 3px;
+}
+
+/* =========================================
+   FLOATING WHATSAPP
+========================================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 17px;
+    background: #151515;
+    border: 1px solid var(--gold);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+}
+
+.floating-whatsapp span {
+    color: var(--gold-light);
+}
+
+.floating-whatsapp strong {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.floating-whatsapp:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-grid,
+    .contact-grid {
+        gap: 50px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: rgba(10, 10, 10, 0.98);
+        border-bottom: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 5px;
+    }
+
+    .nav-links .nav-whatsapp {
+        text-align: center;
+        margin-top: 12px;
+    }
+
+    .hero {
+        min-height: 100svh;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 72px);
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .image-frame img {
+        height: 450px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 350px;
+    }
+
+    .feature-section {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        min-height: 450px;
+    }
+
+    .feature-content {
+        padding: 75px 7%;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .logo strong {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .about-content h2,
+    .section-heading h2,
+    .contact-intro h2 {
+        font-size: 48px;
+    }
+
+    .feature-content h2 {
+        font-size: 48px;
+    }
+
+    .floating-whatsapp strong {
+        display: none;
+    }
+
+}
